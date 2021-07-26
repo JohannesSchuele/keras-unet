@@ -19,12 +19,14 @@ os.environ['PATH'] += ':'+path
 #from models_graph.custom_graph_head import custom_graph_head, custom_adj_unet
 #custom_adj_unet()
 
+
+
 from natsort import natsorted
 #masks = np.load('S:/06_Studienarbeit/03_CNN/generate_data/data/train/label/adjcouput_matrix.npy',allow_pickle='TRUE').item()
-masks = glob.glob('/home/grk/git/graph_learning/train_less128_2000imgs/label/*')
+masks = glob.glob('S:/studenten/Rausch/06_Studienarbeit/03_CNN/generate_data/data/train_less128_2000imgs/label/*')
 masks = natsorted(masks)
 masks = masks[0:1990]
-orgs = glob.glob("/home/grk/git/graph_learning/train_less128_2000imgs/image/*.png")
+orgs = glob.glob("S:/studenten/Rausch/06_Studienarbeit/03_CNN/generate_data/data/train_less128_2000imgs/image/*.png")
 orgs = natsorted(orgs)
 orgs = orgs[0:1990]
 
